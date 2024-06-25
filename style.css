@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background: url('https://i.pinimg.com/originals/37/45/c3/3745c3e50e0e529a2b4e0c78637e1ce3.jpg') no-repeat center center/cover;
+    overflow: hidden;
+}
+
+.star{
+    cursor: pointer;
+    position: absolute;
+    top: -20px;
+    color: #fff;
+    animation:  animate 5s linear forwards;
+ 
+}
+.star::before{
+    content:'\f005' ;
+    font-family: fontAwesome;
+    text-shadow: 0 0 5px #fff,
+     0 0 20px #fff,
+      0 0 50px #fff;
+}
+@keyframes animate {
+    0%{
+        transform: translateY(0)rotate(0deg);
+        opacity: 1;
+    }
+
+    80%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(100vh)rotate(360deg);
+        opacity: 0;
+    }
+}
